@@ -6,7 +6,7 @@ router.get('/comics', async (req, res) => {
     try {
         const filter = {};
 
-        const api_key = process.env.MARVEL_API_KEY 
+        const api_key = process.env.MARVEL_API_KEY;
 
         const { title, limit, apiKey } = req.query;
 
@@ -18,7 +18,7 @@ router.get('/comics', async (req, res) => {
 
         //Pagination
         let page;
-        const limit = Number(limit)
+        const newLimit = Number(limit);
         if (Number(limit) < 1) {
             page = 1;
         } else {
