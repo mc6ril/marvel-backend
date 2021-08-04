@@ -18,9 +18,9 @@ router.get('/characters', async (req, res) => {
 router.get('/character/:id', async (req, res) => {
     try {
         console.log('hello');
-        const id = req.params._id;
+
         const response = await axios.get(
-            `https://lereacteur-marvel-api.herokuapp.com/character/${id}?apiKey=${process.env.MARVEL_API_KEY}`,
+            `https://lereacteur-marvel-api.herokuapp.com/character/${req.params.id}?apiKey=${process.env.MARVEL_API_KEY}`,
         );
 
         console.log(response.data);
