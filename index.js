@@ -12,6 +12,8 @@ require('dotenv').config();
 // Import des routes
 const comicsRoute = require('./Routes/comicsRoutes');
 app.use(comicsRoute);
+const charactersRoute = require('./Routes/charactersRoutes');
+app.use(charactersRoute);
 
 // Initialisation des routes
 
