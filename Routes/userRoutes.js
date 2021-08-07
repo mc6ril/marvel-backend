@@ -7,7 +7,7 @@ const encBase64 = require('crypto-js/enc-base64');
 
 //Récupération du model
 const User = require('../Model/user');
-const isAuthenticated = require('../middlewares/isAuthenticated');
+const isAuthenticated = require('../midlewares/isAuthenticated');
 
 //Initilisation des routes User
 //Initialisation de la route Sign Up
