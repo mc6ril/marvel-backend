@@ -6,7 +6,7 @@ const SHA256 = require('crypto-js/sha256');
 const encBase64 = require('crypto-js/enc-base64');
 
 //Récupération du model
-const User = require('../model/user');
+const User = require('../Model/user');
 const isAuthenticated = require('../middlewares/isAuthenticated');
 
 //Initilisation des routes User
