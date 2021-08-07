@@ -4,7 +4,6 @@ const router = express.Router();
 const uid2 = require('uid2');
 const SHA256 = require('crypto-js/sha256');
 const encBase64 = require('crypto-js/enc-base64');
-const cloudinary = require('cloudinary').v2;
 
 //Récupération du model
 const User = require('../model/user');
@@ -88,9 +87,6 @@ router.delete('/user/delete', isAuthenticated, async (req, res) => {
 
         if (userToDelete) {
             await userToDelete.remove();
-
-            await cloudinary.api.delete_all_resources(`/vinted/user/${userToDelete._id}`);
-            await cloudinary.api.delete_folder(`/vinted/user/${userToDelete._id}`);
 
             res.status(200).json({ message: 'This user has been well deleted' });
         } else {
