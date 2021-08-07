@@ -21,6 +21,8 @@ const comicsRoute = require('./Routes/comicsRoutes');
 app.use(comicsRoute);
 const charactersRoute = require('./Routes/charactersRoutes');
 app.use(charactersRoute);
+const userRoutes = require('./Routes/userRoutes');
+app.use(userRoutes);
 
 // Initialisation des routes
 
